@@ -2,8 +2,8 @@ import turtle
 
 screen = turtle.Screen()
 screen.setup(width=900, height=700)
-screen.bgpic("turkiye_haritasi.png")
-screen.title("Find The City Name")
+screen.bgpic("turkey_map.png")
+screen.title("Turkey Map Quiz")
 
 writer = turtle.Turtle()
 writer.hideturtle()
@@ -16,8 +16,8 @@ cities = {
     "Izmir": {"x": -349, "y": -15, "r": 20}
 }
 
-#def on_click(x, y):
-#   print(x, y)
+# def on_click(x, y):
+#     print(x, y)
 
 def draw_check_mark(x, y):
     marker = turtle.Turtle()
@@ -42,7 +42,7 @@ def on_click(x, y):
     city_name, city_data = get_clicked_city(x, y)
 
     if city_name is None:
-        return  # boş yere tıklandıysa hiçbir şey yapma
+        return
 
     answer = screen.textinput("Şehir Bul", "Bu şehrin adı nedir?")
 
